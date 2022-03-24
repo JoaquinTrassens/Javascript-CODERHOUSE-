@@ -1,4 +1,38 @@
-// Desafio complementario de DOM por TRASSENS JOAQUIN ELIAS
+// Desafio de eventos por TRASSENS JOAQUIN ELIAS
+
+// Incorporacion de evento
+
+const boton1 = document.getElementById('idBoton1');
+boton1.addEventListener('click',eventoBoton1);
+
+const boton2 = document.getElementById('idBoton2');
+boton2.addEventListener('click',eventoBoton2);
+
+const boton3 = document.getElementById('idBoton3');
+boton3.addEventListener('click',eventoBoton3);
+
+const boton4 = document.getElementById('idBoton4');
+boton4.addEventListener('click',eventoBoton4);
+
+const boton5 = document.getElementById('idBoton5');
+boton5.addEventListener('click',eventoBoton5);
+
+function eventoBoton1(){
+    alert("agregaste el producto 1 al carrito");
+}
+function eventoBoton2(){
+    alert("agregaste el producto 2 al carrito");
+}
+function eventoBoton3(){
+    alert("agregaste el producto 3 al carrito");
+}
+function eventoBoton4(){
+    alert("agregaste el producto 4 al carrito");
+}
+function eventoBoton5(){
+    alert("agregaste el producto 5 al carrito");
+}
+
 
 // Array de los productos
 
@@ -45,6 +79,8 @@ const productos = [
     }
 ]
 
+const carrito = [];
+
 // Capto los elementos desde el html
 
 const divProductos = document.querySelector('.productos')
@@ -64,16 +100,17 @@ productos.forEach(element => {
             <!-- Product name-->
             <h5 class="fw-bolder">${element.arma} ${element.tipo}</h5>
             <!-- Skin -->
-            <p>tipo: ${element.skin}</p>
+            <p>Tipo: ${element.skin}</p>
             <!-- Product price-->
-            <p>${element.precio}</p>
+            <p>Precio: $${element.precio}</p>
             <!-- Cantidad -->
-            <p>${element.cantidad}</p>
+            <p>Stock: ${element.cantidad}</p>
         </div>
     </div>
     <!-- Product actions-->
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver detalle</a></div>
+        <button>Agregar al carrito</button>
     </div>
     </div>`
 
